@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+  max-width: 1023px;
+  margin: 0 auto;
+}
+
+.Mapa{
+  background-color: blue;
+  height: 800px;
+}
+#map { 
+  width: 100%;
+  height: 76.04562737642586vh; 
+}
+.Titulos {
+  color: black;
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Textos {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.PrimeiroCarrocel {
+  width: 100%;
+}
+
+.SegundoCarrocel {
+  margin-left: 5%;
+  width: 90%;
+  height: 550px;
+}
+
+.containerNoticia {
+  width: 100%;
+  background-color: rgba(65, 214, 206, 0.349);
+}
+
+/* Carrossel*/
+#slider {
+  width: 100%;
+  height: 50%;
+}
+
+#slider img {
+  opacity: 0;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 25%;
+  transition: opacity 800ms;
+}
+
+#slider img.selected {
+  opacity: 1;
+}
+
+/* 2º Carrocel  */
+.tituloInformacoes {
+  width: 100%;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  justify-items: flex-end;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 95%;
+}
+
+/* Gallery list layout */
+
+.gallery {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual item a.k.a "slide" structure */
+/* Tamanho do carrosel */
+
+.slide {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  width: 90%;
+  height: 90%;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  padding: 10%;
+  gap: 0.5rem;
+}
+
+/* Slide states */
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+  transform: translate(0px) scale(1);
+}
+
+.slide.lqueue {
+  opacity: 0.64;
+  z-index: 1;
+  transform: translate(-100%) scale(0.64);
+}
+
+.slide.rqueue {
+  opacity: 0.64;
+  z-index: 1;
+  transform: translate(100%) scale(0.64);
+}
+
+.slide.lhidden {
+  opacity: 0;
+  z-index: auto;
+  transform: translate(-160%) scale(0);
+}
+
+.slide.rhidden {
+  opacity: 0;
+  z-index: auto;
+  transform: translate(160%) scale(0);
+}
+
+.slide.lqueue *,
+.slide.rqueue *,
+.slide.lhidden *,
+.slide.rhidden * {
+  pointer-events: none;
+}
+
+.slide.lqueue *::selection,
+.slide.rqueue *::selection,
+.slide.lhidden *::selection,
+.slide.rhidden *::selection {
+  background-color: transparent;
+}
+
+/* Slide specifics */
+/* foto */
+.foto {
+  object-position: top;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 50%;
+}
+
+/* Descrição */
+.slide--name,
+.slide--description {
+  align-items: center;
+  text-align: justify;
+  width: 100%;
+}
+
+.slide--description p {
+  margin-top: 5%;
+}
+
+.button {
+  justify-content: center;
+  width: 80px;
+  height: 10%;
+  background-color: rgb(18, 164, 221);
+  border-radius: 10%;
+  color: black;
+  border: solid 2px rgb(16, 144, 194);
+}
+
+.slide button {
+  margin-top: 5%;
+  margin-left: 25%;
+}
+
+.button a {
+  font-size: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.fotofundo {
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s;
+  width: 70%;
+  height: 60%;
+  gap: 0.5rem;
+}
+
+.slide--description {
+  width: 70%;
+  height: 60%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(78, 214, 65);
+  transition: all 0.3s;
+  margin-left: 35%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.slide--description .Titulos2{
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding-top: 5%;
+  text-align: center;
+}
+.TitulosCarrocel{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Kanit', sans-serif;
+}
+.slide--description .Textos{
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Nótica */
+
+.tituloNoticia {
+  top: 10px;
+  margin-bottom: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Titulos a{
+  text-decoration: none;
+  color: black;
+}
+
+.tituloNoticia .Titulos{
+  margin-top: 5%;
+}
+
+.PrimeiraNoticia {
+  width: 50%;
+  height: 60%;
+}
+
+.PrimeiraParteNoticiaTablet {
+  width: 100%;
+  display: flex;
+}
+
+.PrimeiraNoticiaFoto img {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.PrimeiraNoticiaDescricao {
+  margin-left: 5%;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  text-align: justify; 
+}
+.descriçãoTablet{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.PrimeiraNoticiaDescricao .Titulos {
+  display: flex;
+  justify-content: center;
+}
+
+.SegundaNoticia {
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+.SegundaNoticiaFoto img {
+  width: 90%;
+}
+.TresNoticia{
+  display: flex;
+}
+.SegundaNoticiaDescricao {
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  text-align: justify;
+}
+
+.Partead {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.DescriçãoAd {
+  text-align: center;
+  width: 90%;
+  background-color: white;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.ad video{
+  width: 90%;
+}
+
+hr {
+  margin-top: 5%;
+  background-color: black;
+}
+
+.teste {
+  display: flex;
+  justify-content: center;
+}
+
+.teste1 {
+  display: flex;
+  justify-content: center;
+}
+
+.SegundaParteNoticias {
+  width: 100%;
+  height: 100%;
+}
+
+.SegundaParteNoticia {
+  display: flex;
+  margin-top: 5%;
+  padding-left: 2%;
+}
+
+.SegundaParteNoticiaFoto{
+  width: 50%;
+}
+
+.SegundaParteNoticiaFoto img{
+  width: 100%;
+}
+
+.SegundaParteNoticiaDescricao {
+  width: 50%;
+  padding-right: 5%;
+  padding-left: 5%;
+  text-align: justify;
+}
+.DescriçãoDesktop{
+  display: none;
+}
+.Titulos3{
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Kanit', sans-serif;
+  color: black;
+  text-decoration: none;
+}

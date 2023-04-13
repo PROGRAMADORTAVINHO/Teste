@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  <title>Home PI</title>
+  <link rel="stylesheet" href="styleHomeDesktop.css" media="screen and (min-width: 1024px)">
+  <link rel="stylesheet" href="styleHomeTablet.css" media="screen and (min-width:768px) and (max-width:1023px)">
+  <link rel="stylesheet" href="styleHomeSmartphone.css" media="screen and (min-width:375px) and (max-width:767px)">
+</head>
+
+<body>
+
+  <div class="PrimeiroCarrocel">
+    <div id="slider">
+      <img class="selected" src="/images/mãomundo.jpg" alt="">
+      <img src="/images/fotomãos.png" alt="">
+      <img src="/images/foto teste.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="Mapa">
+    <div class="container">
+      <h1 class="status"></h1>
+  </div>
+  <h1></h1>
+  <h2></h2>
+  <div id="map"></div>
+  </div>
+
+  <div class="SegundoCarrocel">
+
+    <div class="tituloInformacoes">
+      <div class="Titulos"> Informações </div>
+    </div>
+
+    <main class="container">
+      <ul class="gallery">
+
+        <li class="slide">
+          <div class="fotofundo">
+            <img class="foto" src="/images/teclado.jpg" alt="">
+          </div>
+          <div class="slide--description">
+            <p class="Titulos2"> Titulo 1 </p>
+            <p class="Textos">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias ipsam rem animi nemo Lorem
+              ipsum dolor sit
+            </p>
+            <div class="DescriçãoDesktop">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ea magni perspiciatis deserunt tempore
+              voluptas.
+            </div>
+            <button class="button"> <a href="https://www.youtube.com/"> Saiba mais </a> </button>
+          </div>
+
+        </li>
+
+        <li class="slide">
+          <div class="fotofundo">
+            <img class="foto" src="/images/lixoeletronio.jpg" alt="">
+          </div>
+          <div class="slide--description">
+            <p class="Titulos2"> Titulo 2 </p>
+            <p class="Textos">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias ipsam rem animi nemo Lorem
+              ipsum dolor sit
+            </p>
+            <div class="DescriçãoDesktop">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ea magni perspiciatis deserunt tempore
+              voluptas.
+            </div>
+            <button class="button"> <a href="https://www.youtube.com/"> Saiba mais </a> </button>
+          </div>
+        </li>
+
+        <li class="slide">
+          <div class="fotofundo">
+            <img class="foto" src="/images/mundo.png" alt="">
+          </div>
+          <div class="slide--description">
+            <p class="Titulos2"> Titulo 3 </p>
+            <p class="Textos">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias ipsam rem animi nemo Lorem
+              ipsum dolor sit
+            </p>
+            <div class="DescriçãoDesktop">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ea magni perspiciatis deserunt tempore
+              voluptas.
+            </div>
+            <button class="button"> <a href="https://www.youtube.com/"> Saiba mais </a> </button>
+          </div>
+        </li>
+
+        <li class="slide">
+          <div class="fotofundo">
+            <img class="foto" src="/images/lixos.jpg" alt="">
+          </div>
+          <div class="slide--description">
+            <p class="Titulos2"> Titulo 4 </p>
+            <p class="Textos">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias ipsam rem animi nemo Lorem
+              ipsum dolor sit
+            </p>
+            <div class="DescriçãoDesktop">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ea magni perspiciatis deserunt tempore
+              voluptas.
+            </div>
+            <button class="button"> <a href="https://www.youtube.com/"> Saiba mais </a> </button>
+          </div>
+        </li>
+
+        <li class="slide">
+          <div class="fotofundo">
+            <img class="foto" src="/images/lixoeletronio2.jpg" alt="">
+          </div>
+          <div class="slide--description">
+            <p class="Titulos2"> Titulo 5 </p>
+            <p class="Textos">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias ipsam rem animi nemo Lorem
+              ipsum dolor sit
+            </p>
+            <div class="DescriçãoDesktop">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ea magni perspiciatis deserunt tempore
+              voluptas.
+            </div>
+            <button class="button"> <a href="https://www.youtube.com/"> Saiba mais </a> </button>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+
+  <div class="containerNoticia">
+    <div class="tituloNoticia">
+      <div class="Titulos"> Notícias </div>
+    </div>
+    <div class="PrimeiraParteNoticiaTablet">
+      <div class="TresNoticia">
+        <div class="PrimeiraNoticia">
+          <div class="PrimeiraNoticiaFoto">
+            <img src="./images/noticiaPontodeDescarte.png" alt="">
+          </div>
+          <div class="PrimeiraNoticiaDescricao">
+            <p class="Titulos"> <a
+                href="https://www.terra.com.br/noticias/pontos-de-descarte-de-lixo-eletronico-crescem-no-pais,21c21302f5450e4b2a3f905e2cb20d5dein0czl4.html">
+                Pontos de descarte de lixo eletrônico crescem no país
+              </a></p>
+            <p class="Textos">
+              De acordo com relatório divulgado recentemente, já estão instalados Centros de Logística Reversa em 24
+              capitais do país, bem como quase 3,7 mil pontos de recebimento espalhados pelo Brasil, estando presente
+              em mais de 1,2 mil municípios brasileiros
+            </p>
+            <p class="descriçãoTablet">
+              Apesar de ser o quinto maior gerador de resíduos eletrônicos do planeta, o Brasil ainda caminha a passos
+              lentos no caminho da correta destinação e reciclagem deste tipo de lixo. De acordo com a pesquisa "Resíduos
+              Eletrônicos no Brasil 2021", realizada pela Green Eletron em parceria com a Radar Pesquisas, apenas 3% do
+              total de resíduos são descartados corretamente no país.
+              Além disso, ainda de acordo com o levantamento, o tema não foi adequadamente trabalhado junto à população.
+              A maior parte dos brasileiros (87%) já ouviu falar em lixo eletrônico, mas um terço (33%) crê que ele
+              esteja relacionado ao meio digital, como spam, e-mails, fotos ou arquivos. Outros 42% dos brasileiros
+              pensam que lixo eletrônico são aparelhos eletrônicos e eletrodomésticos quebrados. E somente 3% acreditam
+              que são todos os aparelhos que já viraram lixo, ou seja, apenas os que foram descartados - ainda que de
+              forma incorreta.
+            </p>
+          </div>
+        </div>
+
+        <div class="SeparacaoNoticia"></div>
+
+        <div class="SegundaNoticia">
+
+          <div class="ParteNoticia">
+            <div class="SegundaNoticiaFoto">
+              <img src="./images/Montanha de lixo eletrônico.png" alt="">
+            </div>
+            <div class="SegundaNoticiaDescricao">
+              <p class="Titulos"> <a
+                  href="https://g1.globo.com/mundo/noticia/2020/07/05/montanha-de-lixo-eletronico-nao-para-de-crescer-no-mundo.ghtml">
+                  Montanha de lixo eletrônico não para de crescer no mundo
+                </a></p>
+            </div>
+          </div>
+
+          <div class="Partead">
+            <div class="ad">
+              <video autoplay loop muted plays-inline class="background-clip">
+                <source src="/images/Japan's Weirdest Commercial (Yes Milk).mp4" type="video/mp4">
+              </video>
+              <div class="DescriçãoAd"> Publicidade </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="PrimeiraParteNoticia">
+
+      <div class="SeparacaoNoticia"></div>
+
+    </div>
+
+    <hr>
+
+    <div class="SegundaParteNoticias">
+      <div class="teste">
+        <div class="SegundaParteNoticia">
+          <div class="SegundaParteNoticiaFoto">
+            <img src="/images/noticia do Brasil.png" alt="">
+          </div>
+          <div class="SegundaParteNoticiaDescricao">
+            <a class="Titulos3" href="https://brasil61.com/n/coleta-de-lixo-eletronico-cresce-75-vezes-no-brasil-em-tres-anos-e-chega-a-1-2-mil-toneladas-em-2021-bras226837">
+             Coleta de lixo eletrônico cresce 75 vezes no Brasil em três anos e chega a 1,2 mil toneladas em 2021 </a>
+          </div>
+        </div>
+
+        <div class="SegundaParteNoticia">
+          <div class="SegundaParteNoticiaFoto">
+            <img src="/images/Aumento do lixo.jpg" alt="">
+          </div>
+          <div class="SegundaParteNoticiaDescricao">
+            <a class="Titulos3" href="https://www.paho.org/pt/noticias/15-6-2021-aumento-do-lixo-eletronico-afeta-saude-milhoes-criancas-alerta-oms">
+              Aumento do lixo eletrônico afeta saúde de milhões de crianças, alerta OMS </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="teste1">
+        <div class="SegundaParteNoticia">
+          <div class="SegundaParteNoticiaFoto">
+            <img src="/images/noticia3.0.png" alt="">
+          </div>
+          <div class="SegundaParteNoticiaDescricao">
+            <a class="Titulos3" href="https://agenciabrasil.ebc.com.br/geral/noticia/2021-10/brasil-e-o-quinto-maior-produtor-de-lixo-eletronico">
+              Brasil é o quinto maior produtor de lixo eletrônico </a>
+          </div>
+        </div>
+
+        <div class="SegundaParteNoticia">
+          <div class="SegundaParteNoticiaFoto">
+            <img src="/images/noticia4.0.jpg" alt="">
+          </div>
+          <div class="SegundaParteNoticiaDescricao">
+            <a class="Titulos3" href="https://jornal.usp.br/atualidades/descarte-irregular-de-lixo-eletronico-cresceu-49-na-ultima-decada-na-america-latina/">
+              Descarte irregular de lixo eletrônico cresceu 49% na última década na América Latina
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="scriptHome.js"></script>
+
+</body>
+
+</html>
